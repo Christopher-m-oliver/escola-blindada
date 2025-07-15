@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.tela {
+  display: none;
+  background: white;
+  border-radius: 20px;
+  padding: 30px 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.ativa {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.logo {
+  width: 200px;
+  margin-top: 15px;
+}
+
+h1, h2 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.subtitulo {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  resize: none;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+  font-size: 15px;
+  text-align: left;
+}
+
+.btn {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-blue { background-color: #0052cc; }
+.btn-blue:hover { background-color: #003d99; }
+
+.btn-red { background-color: #d60000; }
+.btn-red:hover { background-color: #a80000; }
+
+.btn-green { background-color: #009e60; }
+.btn-green:hover { background-color: #007948; }
+
+.btn-voltar {
+  background-color: #aaa;
+  color: #fff;
+}
+
+.btn-voltar:hover {
+  background-color: #888;
+}

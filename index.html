@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escola Blindada</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+<div id="tela-inicial" class="tela ativa">
+  <img src="https://i.imgur.com/eJZxuBF.png" alt="Logo" class="logo">
+  <h1>Escola Blindada</h1>
+  <p class="subtitulo">Como podemos te ajudar?</p>
+
+  <button class="btn btn-red" onclick="mostrarTela('relato')">QUERO RELATAR ALGO</button>
+  <button class="btn btn-red" onclick="mostrarTela('conflito')">CONFLITO PRESENCIADO</button>
+  <button class="btn btn-red" onclick="mostrarTela('ajuda')">AJUDA IMEDIATA</button>
+</div>
+
+<div id="tela-relato" class="tela">
+  <h2>Relato Anônimo</h2>
+  <textarea id="relatoTexto" placeholder="Descreva o que aconteceu..."></textarea>
+  <button class="btn btn-green" onclick="enviarRelato()">Enviar</button>
+  <button class="btn btn-voltar" onclick="mostrarTela('inicial')">Voltar</button>
+</div>
+
+<div id="tela-conflito" class="tela">
+  <h2>Tipo de Conflito</h2>
+  <form id="formConflito">
+    <label><input type="radio" name="tipo" value="Assédio Físico"> Assédio Físico</label><br>
+    <label><input type="radio" name="tipo" value="Assédio Verbal"> Assédio Verbal</label><br>
+    <label><input type="radio" name="tipo" value="Assédio Moral"> Assédio Moral</label><br>
+  </form>
+  <button class="btn btn-green" onclick="enviarConflito()">Registrar</button>
+  <button class="btn btn-voltar" onclick="mostrarTela('inicial')">Voltar</button>
+</div>
+
+<div id="tela-ajuda" class="tela">
+  <h2>🚨 Ajuda Imediata Solicitada</h2>
+  <p>Equipe da escola foi notificada.</p>
+  <button class="btn btn-red" onclick="mostrarTela('inicial')">Voltar</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
